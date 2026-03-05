@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/style_new.css" />
+    <title>Koenigsegg Website</title>
+    <script
+      src="https://kit.fontawesome.com/384a4d7cfa.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="header_logo">
+          <a href="/">
+            <img src="/images/koenigsegg_logo.jpg" alt="Header Image" />
+          </a>
+          <div class="header_logo_links">
+            <% if (!user) { %>
+            <a href="/users/login">Login</a>
+            <a href="/users/new">Sign Up</a>
+            <% } else { %>
+            <a href="/events/new">Create a New Event</a>
+            <a href="/users/profile"><%=userDetails?.firstName%>'s Profile</a>
+            <a href="/users/logout">Logout</a>
+            <% } %>
+          </div>
+        </div>
+
+        <div class="nav-wrapper">
+          <a href="/">Home</a>
+          <a href="/events">Events</a>
+        </div>
+      </nav>
+
+      <% if(errorMessages.length > 0) {%> <% errorMessages.forEach(message=>{%>
+      <div class="error"><%=message%></div>
+      <%});%> <%}%> <% if(successMessages.length > 0) {%> <%
+      successMessages.forEach(message=>{%>
+      <div class="success"><%=message%></div>
+      <%});%> <%}%>
+    </header>
+  </body>
+</html>

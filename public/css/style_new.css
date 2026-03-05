@@ -1,0 +1,267 @@
+.form-container {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  align-content: center;
+  border: 1px outset rgb(9, 8, 9);
+  margin: auto;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-group input,
+textarea,
+button,
+select {
+  width: 100%;
+  padding: 2px;
+  font-size: 1em;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+.form-group label {
+  color: rgb(192, 191, 191);
+}
+.form-group input {
+  display: inline;
+}
+
+.form-group button {
+  background-color: #4e6502;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.form-group button:hover {
+  background-color: #516d3b;
+}
+
+/* Login Page=============================================================== */
+.Login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.login_child {
+  border: white 2px solid;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px;
+  width: fit-content;
+}
+
+.login_child form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 80%;
+  max-width: 300px;
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+.login_child input {
+  font-size: 1rem;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.login_child input[type="submit"] {
+  background-color: yellowgreen; /* Set a background color */
+  color: white; /* Set text color */
+  border: none; /* Remove default border */
+  padding: 10px 20px; /* Add padding for better size */
+  width: fit-content;
+}
+
+input[type="submit"]:hover {
+  cursor: pointer;
+  background-color: #0056b3; /* Darken background color on hover */
+}
+/* New User Page =========================================================*/
+.Signup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.signup_child {
+  border: white 2px solid;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px;
+  width: fit-content;
+}
+.signup_child form {
+  display: flex;
+
+  flex-direction: column;
+  padding: 10px;
+  gap: 15px;
+  width: 80%;
+  max-width: 300px;
+  font-size: 1.5rem;
+  text-align: left;
+}
+.signup_child input {
+  font-size: 1rem;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.signup_child input[type="submit"] {
+  background-color: yellowgreen;
+  color: white; /* Set text color */
+  border: none; /* Remove default border */
+  padding: 10px 20px; /* Add padding for better size */
+  width: fit-content;
+}
+
+.signup_child input[type="submit"]:hover {
+  cursor: pointer;
+  background-color: #0056b3; /* Darken background color on hover */
+}
+/* profile page============================================================= */
+
+.Profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profile_child {
+  border: white 2px solid;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers content vertically */
+  align-items: center; /* Centers content horizontally */
+  text-align: center; /* Centers text inside the content */
+  margin: 0 auto; /* Ensures the element is horizontally centered */
+  padding: 20px;
+  width: fit-content;
+}
+
+.profile_child h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.profile_child p {
+  font-size: 1.5rem;
+  font-weight: bold; /* Makes the text bold */
+  margin: 10px 0;
+}
+
+.profile_child a {
+  color: rgb(235, 240, 227);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.profile_child a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+.profile_event_item {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.profile_event_actions {
+  display: flex;
+  gap: 10px;
+  padding: 0.2em 0.2em;
+}
+.profile_event_actions button {
+  background-color: yellowgreen;
+  width: fit-content;
+  padding: 0.2em 0.2em;
+}
+.profile_event_actions button:hover {
+  background-color: white;
+  cursor: pointer;
+  color: rgb(11, 15, 238);
+}
+
+/* rsvp event.show page *=========================================================*/
+.rsvp_yes_no_maybe {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  /* text-decoration: underline; */
+  font-family: "Times New Roman", Times, serif;
+  font-size: large;
+}
+
+.rsvp_yes_no_maybe button {
+  background-color: yellowgreen;
+  width: fit-content;
+  padding: 0.3em 0.3em;
+}
+
+.rsvp_yes_no_maybe button:hover {
+  background-color: white;
+  cursor: pointer;
+  color: rgb(11, 15, 238);
+}
+
+.child_rsvp_yes_no_maybe p {
+  text-decoration: underline;
+  font-size: 1.5rem;
+}
+
+.rsvp_count {
+  display: flex;
+  justify-content: flex-end;
+  text-decoration: dashed;
+  font-family: "Times New Roman", Times, serif;
+  font-size: large;
+  font-weight: bolder;
+}
+
+/* flash messages=========================================================================== */
+
+.success {
+  background: rgba(108, 192, 112, 0.7);
+  color: #fff;
+  width: 70%;
+  margin: 0 auto 1rem auto;
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+.error {
+  background: rgba(255, 102, 51, 0.7);
+  color: #fff;
+  width: 70%;
+  margin: 0 auto 1rem auto;
+  text-align: center;
+  padding: 0.5rem 0;
+}

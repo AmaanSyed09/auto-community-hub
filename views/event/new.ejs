@@ -1,0 +1,74 @@
+<%- include('../partials/header.ejs')%>
+
+<div class="form-container">
+  <h2>Create a new Event</h2>
+  <br />
+
+  <form action="/events" enctype="multipart/form-data" method="POST">
+    <!-- //enctype="multipart/form-data" is used to upload files and is extremely important-->
+    <div class="form-group">
+      <label for="category">Category</label>
+      <!-- <input type="text" id="Topic" name="Topic" placeholder="Select a Category.." required> -->
+      <select name="category" id="category" required>
+        <option value="" disable selected>Select a category...</option>
+        <option value="Car Race">Car Race</option>
+        <option value="Car Shows">Car Shows</option>
+        <option value="Car Community Events">Car Community Events</option>
+        <option value="Car Meet Up">Car Meet Up</option>
+        <option value="Car Rally">Car Rally</option>
+        <option value="Car Unveiling">Car Unveiling</option>
+      </select>
+
+      <label for="title">Title</label>
+      <input
+        type="text"
+        id="title"
+        name="title"
+        placeholder="Enter the Title.."
+        required
+      />
+
+      <label for="Details">Details</label>
+      <input
+        type="text"
+        id="details"
+        name="details"
+        placeholder="Enter the details of your Event.."
+        required
+      />
+
+      <label for="location">Location</label>
+      <input
+        type="text"
+        id="location"
+        name="location"
+        placeholder="Enter the location of your Event.."
+        required
+      />
+
+      <label for="startDate">Start</label>
+      <input
+        type="datetime-local"
+        id="startDate"
+        name="startDate"
+        placeholder="Enter start date and time.."
+        required
+      />
+
+      <label for="endDate">End</label>
+      <input
+        type="datetime-local"
+        id="endDate"
+        name="endDate"
+        placeholder="Enter end date and time.."
+        required
+      />
+
+      <label for="image">Image</label>
+      <input type="file" id="image" name="image" />
+
+      <button type="submit">Create Event</button>
+    </div>
+  </form>
+</div>
+<%- include('../partials/footer.ejs')%>

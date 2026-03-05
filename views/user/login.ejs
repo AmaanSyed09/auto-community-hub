@@ -1,0 +1,21 @@
+
+<%- include('../partials/header.ejs')%>
+<div class="Login">
+    <div class="login_child">
+    <h4>Please enter your login credentials.</h4>
+    <form action = '/users/login' method = 'POST' class="user-form">
+        <label for="email">Email Address</label></td>
+        <input type="email" id="email" name="email" required></td>
+           
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+           
+        <input type="submit" value="Login">     
+    </form>
+</div>
+</div>
+
+    
+<%- include('../partials/footer.ejs')%>
+
+

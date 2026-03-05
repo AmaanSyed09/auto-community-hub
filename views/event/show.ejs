@@ -1,0 +1,79 @@
+<%- include('../partials/header.ejs')%>
+
+<div class="content">
+  <div class="content_child">
+    <h2><%= event.category %></h2>
+    <h4><%= event.title %></h4>
+    <p>Host: <%= event.host.firstName %> <%= event.host.lastName %></p>
+    <p>LOCATION: <%= event.location %></p>
+    <p>Start: <%= event.startDate %></p>
+    <p>End: <%= event.endDate %></p>
+
+    <div id="details"><%= event.details %></div>
+    <br />
+    <div class="image">
+      <img src="<%= event.image %>" alt="Event Image" class="show_image" />
+    </div>
+    <br />
+    <div class="rsvp_count">
+      <p>Number of RSVP's :</p>
+      <br />
+
+      <p><%= event.rsvps %></p>
+    </div>
+
+    <% if (user && user != event.host._id) { %>
+    <div class="super_rsvp">
+      <div class="rsvp_yes_no_maybe">
+        <div class="child_rsvp_yes_no_maybe">
+          <p>Will you be attending the event ?</p>
+          <form action="/events/rsvp/<%= event._id %>" method="POST">
+            <button
+              type="submit"
+              value="YES"
+              name="rsvp"
+              class="btn btn-success"
+            >
+              Yes
+            </button>
+
+            <button type="submit" value="NO" name="rsvp" class="btn btn-danger">
+              No
+            </button>
+
+            <button
+              type="submit"
+              value="MAYBE"
+              name="rsvp"
+              class="btn btn-primary"
+            >
+              Maybe
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <% } %> <% if (user == event.host._id) { %>
+    <form class="add_delete">
+      <button
+        type="submit"
+        formmethod="get"
+        formaction="/events/<%= event._id %>/edit"
+      >
+        <i class="fa-solid fa-pen-to-square"></i>
+      </button>
+
+      <button
+        type="submit"
+        formmethod="post"
+        formaction="/events/<%= event._id %>?_method=DELETE"
+      >
+        <i class="fa-solid fa-trash-can"></i>
+      </button>
+    </form>
+    <% } %>
+  </div>
+</div>
+
+<%- include('../partials/footer.ejs')%>

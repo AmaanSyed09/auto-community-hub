@@ -1,0 +1,17 @@
+<%- include('../partials/header.ejs') %>
+<div class="category_division">
+  <div class="category_container">
+    <% if(categories.length){ %> <% categories.forEach(category=> { %>
+    <div class="category_division_Title">
+      <h2 class="category_name"><%= category %></h2>
+      <% events.forEach(event=> {if(event.category === category){ %>
+      <a href="/events/<%= event.id %>"><p><%= event.title %></p></a>
+      <% }}) %>
+    </div>
+    <% }) %> <% } else { %>
+    <h2>Sorry!! Cannot Find The Event That You Are Looking For</h2>
+    <% } %>
+  </div>
+</div>
+
+<%- include('../partials/footer.ejs') %>
